@@ -25,18 +25,18 @@ class TagRequest extends FormRequest
     {
         return [
             'id_user' => 'required', 
-            'nome_github' => 'required',
-            'language_github' => 'required',
-            'link_github' => 'required'
+            'nome' => 'required',
+            'language' => 'required',
+            'image' => 'required'
         ];
     }
 
     public function messages() {
         return [
             'id_user.required' => 'Você deve escolher um usuário',
-            'nome_github.required' => 'Você deve preencher um repositório',
-            'language_github.required' => 'Você deve preencher uma linguagem',
-            'link_github.required' => 'Você deve preencher o link',
+            'nome.required' => 'Você deve preencher um Filme',
+            'language.required' => 'Você deve preencher uma linguagem',
+            'image.required' => 'Você deve preencher o link',
         ];
     }
 }

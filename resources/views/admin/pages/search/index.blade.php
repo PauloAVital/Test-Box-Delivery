@@ -124,9 +124,9 @@
                 dados.push($(this).text());
             });
             console.log(dados);
-            let nome_github = dados[1];
-            let language_github = dados[3];
-            let link_github = dados[4];
+            let nome = dados[1];
+            let language = dados[3];
+            let image = dados[4];
             let _token   = $('meta[name="csrf-token"]').attr('content');
            
 
@@ -134,13 +134,13 @@
                 type: 'POST',
                 url: "users/tagCreate",
                 data: {
-                    nome_github: nome_github,
-                    language_github: language_github,
-                    link_github: link_github,                    
+                    nome: nome,
+                    language: language,
+                    image: image,                    
                     _token: _token
                 },
                 success: function(data) {
-                    alert('Tageado com SUCESSO');
+                    alert('Favoritado com SUCESSO');
                 }
             });
 

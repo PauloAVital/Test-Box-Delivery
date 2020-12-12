@@ -25,11 +25,13 @@
             <p class="card-text">Cadastrado: <b>{{$user->created_at}}</b></p>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Termo: <b>{{$tag->nome_github}}</b></li>
-            <li class="list-group-item">Language: <b>{{$tag->language_github}}</b> </li>            
+            <li class="list-group-item">Termo: <b>{{$tag->nome}}</b></li>
+            <li class="list-group-item">Language: <b>{{$tag->language}}</b> </li>            
         </ul>
         <div class="card-body">
-            <a href="{{$tag->link_github}}" class="card-link" target="_blank">{{$tag->link_github}}</a>           
+            <a href="{{$tag->image}}" class="card-link" target="_blank">
+            <img src="{{$tag->image}}" width="200" height="150">
+            </a>
         </div>
     </div>    
 </div>

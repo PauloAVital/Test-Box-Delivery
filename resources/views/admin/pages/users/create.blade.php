@@ -37,22 +37,24 @@
         </select>
         <input class="form-control mt-3 mb-4" 
                type="text" 
-               name="nome_github" 
-               id="nome_github" 
-               value="{{$tags->nome_github ?? ''}}" 
+               name="nome" 
+               id="nome" 
+               value="{{$tags->nome ?? ''}}" 
                placeholder="Nome Repositório">
         <input class="form-control mt-3 mb-4" 
                type="text" 
-               name="language_github" 
-               id="language_github" 
-               value="{{$tags->language_github ?? ''}}" 
+               name="language" 
+               id="language" 
+               value="{{$tags->language ?? ''}}" 
                placeholder="Linguagem">
         <input class="form-control mt-3 mb-4" 
                type="text" 
-               name="link_github" 
-               id="link_github" 
-               value="{{$tags->link_github ?? ''}}" 
+               name="image" 
+               id="image" 
+               value="{{$tags->image ?? ''}}" 
                placeholder="Link do Repositório">
+               <img src="{{$tags->image  ?? ''}}" width="70" height="50">
+               <hr>
         <input class="btn btn-primary mt-3 mb-4" 
                type="submit" 
                value="@if(isset($tags)) Editar @else Cadastrar @endif">

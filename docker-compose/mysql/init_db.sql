@@ -19,20 +19,20 @@
 -- Table structure for table `control_tags`
 --
 
-DROP TABLE IF EXISTS `control_tags`;
+DROP TABLE IF EXISTS `control_favoritos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `control_tags` (
+CREATE TABLE `control_favoritos` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `id_user` int(10) unsigned NOT NULL,
-  `nome_github` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `language_github` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `link_github` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `language` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `control_tags_id_user_foreign` (`id_user`),
-  CONSTRAINT `control_tags_id_user_foreign` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `control_favoritos_id_user_foreign` (`id_user`),
+  CONSTRAINT `control_favoritos_id_user_foreign` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

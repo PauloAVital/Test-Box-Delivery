@@ -13,13 +13,13 @@ class CreateControlTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('control_tags', function (Blueprint $table) {
+        Schema::create('control_favoritos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('nome_github');
-            $table->string('language_github');
-            $table->string('link_github');                        
+            $table->string('nome');
+            $table->string('language');
+            $table->string('image');                        
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateControlTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('control_tags');
+        Schema::dropIfExists('control_favoritos');
     }
 }

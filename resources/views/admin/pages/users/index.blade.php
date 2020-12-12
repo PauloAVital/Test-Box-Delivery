@@ -18,7 +18,7 @@
                 <th>id_user</th>
                 <th>nome</th>
                 <th>language</th>
-                <th>url</th>
+                <th>Image</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -30,9 +30,9 @@
             <tr>
                 <th scope="row">{{$tags->id}}</th>
                 <td>{{$tags->id_user}} - {{$user->name}}</td>
-                <td>{{$tags->nome_github}}</td>
-                <td>{{$tags->language_github}}</td>
-                <td>{{$tags->link_github}}</td>
+                <td>{{$tags->nome}}</td>
+                <td>{{$tags->language}}</td>
+                <td><img src="{{$tags->image}}" width="70" height="50"></td>
                 <td  width="200">
                     <a href="{{ url("users/$tags->id") }}"> <button class="btn btn-light fa far fa-eye"></button> </a>
                     <a href="{{ url("users/$tags->id/edit") }}"> <button class="btn btn-primary fa fas fa-edit"></button> </a>

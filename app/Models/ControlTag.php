@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ControlTag extends Model
 {
-    protected $table = 'control_tags';
+    protected $table = 'control_favoritos';
     protected $fillable = ['id_user', 
-                           'nome_github',
-                           'language_github',
-                           'link_github'
+                           'nome',
+                           'language',
+                           'image'
                           ];
 
 

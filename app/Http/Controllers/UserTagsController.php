@@ -42,16 +42,16 @@ class UserTagsController extends Controller
     }
 
     public function tagCreate(Request $request) {                      
-        var_dump($request);
+
         echo auth()->user()->id.'<br>';
-        echo $request->nome_github.'<br>';
-        echo $request->language_github.'<br>';
-        echo $request->link_github.'<br>';
+        echo $request->nome.'<br>';
+        echo $request->language.'<br>';
+        echo $request->image.'<br>';
         $cadTag = $this->objTags->create([
             'id_user' => auth()->user()->id, 
-            'nome_github' => $request->nome_github,
-            'language_github' => $request->language_github,
-            'link_github' => $request->link_github
+            'nome' => $request->nome,
+            'language' => $request->language,
+            'image' => $request->image
         ]);
         if($cadTag){
             return redirect('users');
@@ -67,9 +67,9 @@ class UserTagsController extends Controller
     {
         $cadTag = $this->objTags->create([
             'id_user' => $request->id_user, 
-            'nome_github' => $request->nome_github,
-            'language_github' => $request->language_github,
-            'link_github' => $request->link_github
+            'nome' => $request->nome,
+            'language' => $request->language,
+            'image' => $request->link
         ]);
         if($cadTag){
             return redirect('users');
@@ -112,9 +112,9 @@ class UserTagsController extends Controller
     {
         $this->objTags->where(['id'=>$id])->update([
             'id_user' => $request->id_user, 
-            'nome_github' => $request->nome_github,
-            'language_github' => $request->language_github,
-            'link_github' => $request->link_github
+            'nome' => $request->nome,
+            'language' => $request->language,
+            'image' => $request->image
         ]);
         return redirect('users');
     }
